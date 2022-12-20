@@ -62,7 +62,7 @@ function GenerateRackTiles() {
         let result = alpha.charAt(Math.floor(Math.random() * alpha.length));
         $('#letter-rack').append(
             `<img class="letter-tile" letter="${result}" id="tile-${tileId}"
-                src="./Images/tiles/Scrabble_tile_${result}.jpg">
+                src="./Images/tiles/Scrabble_Tile_${result}.jpg">
             `
         )
     }
@@ -192,7 +192,7 @@ $(window).load(function () {
 
     // Make letter-tile draggable
     $(".letter-tile").draggable();
-    // Make Letter-tile revertable
+    // // Make Letter-tile revertable
     $(".letter-tile").draggable({ revert: "invalid" });
 
     // Make the board slots droppable.
@@ -201,7 +201,7 @@ $(window).load(function () {
         activeClass: "dragHighlight",
         hoverClass: "hoverHighlight",
         drop: function (event, ui) {
-            let row, col, letter, word, tileId, previousPositionOnBoard;
+            let row, col, letter, tileId;
 
             ui.draggable.removeClass("letterTileOnRack");
             ui.draggable.addClass("letterTileOnBoard");
