@@ -1,0 +1,75 @@
+<!-- 
+    File: index.html
+    GUI Assignment: HW5
+    Date: 12/16/2022
+    Bryan Montalvan, UMass Lowell Computer Science, bryan_montalvanarevalo@student.uml.edu
+ -->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scrabble</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:ital,wght@1,100&display=swap"
+    rel="stylesheet">
+  <!-- jQuery -->
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <!-- Defines the content area which may not correspond to the entire screen size. -->
+  <div class="container">
+
+    <h1>Assignment 9: Scrabble </h1>
+
+    <!-- Score tracker -->
+    <div id="scoreBoard">
+      <!-- Current Word -->
+      <div class="label">Word:</div>
+      <div id="word"></div>
+      <!-- Current Score -->
+      <div class="label">Score:</div>
+      <div id="score">0</div>
+      <!-- Remaning Tiles -->
+      <div class="label">Remaining Tiles:</div>
+      <div id="remainingTiles"></div>
+      <!-- Highest Score -->
+      <div class="label">Highest Score:</div>
+      <div id="highestScore">&minus;</div>
+    </div>
+
+    <div id="board"></div>
+
+    <!-- List of conditions that the word must meet. JavaScript highlights the check (v) icon next to each of them
+           as the user builds a word. -->
+    <div id="instruction">
+      <p>Create one word with no gap between letters.</p>
+      <p>The word must contain at least 2 letters.</p>
+      <p>The word must be found in the dictionary.</p>
+    </div>
+
+    <!-- Control buttons -->
+    <div class="buttonBox">
+      <button id="nextWordButton" onclick="nextWord()">Next Word</button>
+      <button id="restartButton">Start Over</button>
+    </div>
+
+    <!-- Rack containing the 7 tiles. The tiles will be placed by script. -->
+    <div id="letter-rack"></div>
+  </div>
+
+  </div> <!-- End of contents_wrapper -->
+  <script src="./js/script.js" type="module"></script>
+
+</body>
+
+</html>

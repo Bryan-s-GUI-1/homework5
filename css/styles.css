@@ -1,0 +1,126 @@
+* {
+    margin: 0px;
+}
+
+h1 {
+    padding-top: 10px;
+    text-align: center;
+}
+
+body {
+    background-color: #F4D03F;
+    background-image: linear-gradient(132deg, #F4D03F 0%, #16A085 100%);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container {
+    border: 2px solid black;
+    background-color: rgb(206, 206, 206) ;
+    width: 1000px;
+    height: 600px;
+    margin: 30px auto 10px auto;
+    border-radius: 30px;
+
+}
+
+/* Score-board */
+#scoreBoard {
+    display: flex;
+    gap: 30px;
+    width: 600px;
+    margin: 30px auto 10px auto;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+}
+
+#scoreBoard div {
+    display: inline-block;
+}
+
+#scoreBoard>div>div:nth-child(2) {
+    width: 72px;
+    font-weight: bold;
+}
+
+/* Board */
+#board {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.boardSlot {
+    border-style: solid;
+    border-color: black;
+    float: left;
+}
+
+.buttonBox {
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#instruction {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+
+#letter-rack {
+    width: 620px;
+    height: 144px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url("../Images/rack.png");
+}
+
+
+/* Adjust position so the tile sits naturally on the rack and board background image. */
+.letterTileOnRack {
+    margin: 27px 5px 0px 5px;
+}
+
+.letterTileOnBoard {
+    top: 3px;
+}
+
+.letterTileInDialog {
+    width: 40px;
+    height: 44px;
+    margin: 1px;
+    float: left;
+}
+
+.letterTileInDialog:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px blue;
+}
+
+/* Highlight drop targets when dragging a tile and hovering over a specific board slot. */
+.dragHighlight {
+    box-shadow: 0px 0px 15px green;
+}
+
+.hoverHighlight {
+    box-shadow: 0px 0px 15px blue;
+}
+
+/* Hide the title bar the blank tile dialog. The dialog should only close when
+the user clicks one of the tile images. */
+.ui-dialog-titlebar {
+    display: none;
+}
+
+
+.letter-tile {
+    position: relative;
+    width: 75px;
+    inset: 0px auto auto 0px;
+    height: 81px;
+}
