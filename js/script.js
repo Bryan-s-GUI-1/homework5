@@ -62,8 +62,7 @@ function GenerateRackTiles() {
         let result = alpha.charAt(Math.floor(Math.random() * alpha.length));
         $('#letter-rack').append(
             `<img class="letter-tile" letter="${result}" id="tile-${tileId}"
-                src="./Images/tiles/Scrabble_tile_${result}.jpg"
-            </img>
+                src="./Images/tiles/Scrabble_tile_${result}.jpg">
             `
         )
     }
